@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IP real</title>
+  </head>
+  <body>
+     Mi IP es: <strong id="ipId"></strong>
+
+    <script type="text/javascript">
+        function get_ip(obj){
+            document.getElementById('ipId').innerHTML = obj.ip;
+        }
+    </script>
+    <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
+  </body>
+</html>
+
+
+{% comment %} javascript {% endcomment %}
+    <!-- boton de whatsap -->
+
+    <a class="fab fa-whatsapp" id="botonClick" href="https://api.whatsapp.com/send?phone=%2B5493515371584&text=Hola+Maida+Filomena+Balder%2C+requiero+de+sus+servicios+de+vidente" target="_blank"> Contactame</a>
+    <!-- <a href="https://wa.me/34555005500?text=Hola%20Maida Filomena Balder,%20queria solicitar sus servicios de vidente"  target="_blank">
+        <img src="logo.png" width="50" height="50">
+        </a> -->
+
+        contador de clicks: <strong id="clicks"> {{ clicks }} </strong>
+
+        Mi IP es: <strong id="ipId"></strong>
+        
+        <script type="text/javascript">
+            function get_ip(obj){
+                document.getElementById('ipId').innerHTML = obj.ip;
+            }
+        </script>
+        <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
+    
+    <!-- fin del boton de whatsap -->
+        
+
+    <!-- muestra el Contador -->
+    <p id="areaContador"></p>
+    
+    
+    <!--  Contador	-->
+    <script type="text/javascript">
+        
+        var botonElement = document.getElementById("botonClick");
+        var pElement = document.getElementById("areaContador");
+        var contador = 0;
+
+        botonElement.onclick = function () {
+            contador++;
+            pElement.textContent = contador;
+        }
+    </script>
+
+    <!--  fin del Contador	-->
+{% comment %} final de script de javascript {% endcomment %}
+
+
+
+
+
+
+
+
+
+<!--  Ultimo  -->
+
+<!-- boton de whatsap -->										
+<form method="POST"> {% csrf_token %}
+    {{ form.as_p }}
+    <a class="fab fa-whatsapp" id="botonClick" type="submit" href="https://api.whatsapp.com/send?phone=%2B5493515371584&text=Hola+Maida+Filomena+Balder%2C+requiero+de+sus+servicios+de+vidente" target="_blank"> Contactame</a>
+</form>
+
+Mi IP es: <strong id="ipId"></strong>
+<!-- muestra el Contador -->
+<p id="areaContador"></p>	
+
+<script type="text/javascript">
+    var botonElement = document.getElementById("botonClick");
+    var pElement = document.getElementById("areaContador");
+    // traer de la base de datos el numero
+    var contador = 0;
+    function get_ip(obj){
+        document.getElementById('ipId').innerHTML = obj.ip;
+    }											
+</script>
+
+<script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip">
+</script>
+
+<script type="text/javascript">
+    
+    if (document.getElementById('ipId').innerHTML != "186.122.108.136" ) {
+        botonElement.onclick = function () {
+            contador++;
+            pElement.textContent = contador;
+        }
+        
+    }
+</script>
+<!-- fin del boton de whatsap -->
+
+
+
+
+
+
+
+
+
+
+{% comment %} ULTIMO {% endcomment %}
+<script>
+botonElement.onclick = function () {
+    if (document.getElementById('ipId').innerHTML != ip){	
+        contador++; //contador inutil solo lo imprimo para ver que funcione el if
+        pElement.textContent = contador;
+        ip = document.getElementById('ipId').innerHTML;
+        
+        function abrirNuevoTab(url) {
+            // Abrir nuevo tab
+            var win = window.open(url, '_blank');
+            // Cambiar el foco al nuevo tab (punto opcional)
+            win.focus();
+          }
+        
+        //evita que se abra el link por defecto de wsp
+        event.preventDefault();
+        $.ajax({
+        type: "GET",
+        url: "/contador/",
+        data: {'numero_wsp': numero_wsp
+        },
+        success: function () {
+            abrirNuevoTab('https://api.whatsapp.com/send?phone=%' +  numero_wsp  +'&text=Hola+Maida');
+        }
+        });
+          
+
+    }
+    
+
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------ULTIMO ----------------------------------------------------
+
+									<!-- boton de whatsap -->										
+									
+									<a class="fab fa-whatsapp" id="botonClick" type="submit" href="https://api.whatsapp.com/send?phone=%2B5493515371999&text=Hola+Maida" target="_blank"> Contactame</a>
+									
+									Mi IP es: <strong id="ipId">ip</strong>
+									<!-- muestra el Contador -->
+									<p id="areaContador"></p>	
+
+									<script type="text/javascript">
+										var botonElement = document.getElementById("botonClick");
+										var pElement = document.getElementById("areaContador");
+										// traer de la base de datos el numero
+										var contador = 0;
+										function get_ip(obj){
+											document.getElementById('ipId').innerHTML = obj.ip;
+										}
+									</script>
+
+									<script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip">
+									</script>
+
+									<script type="text/javascript">
+										var ip = "";								
+
+											botonElement.onclick = function () {
+												if (document.getElementById('ipId').innerHTML != ip){	
+													contador++; //contador inutil solo lo imprimo para ver que funcione el if
+													pElement.textContent = contador;
+													ip = document.getElementById('ipId').innerHTML;
+													
+													function abrirNuevoTab(url) {
+														// Abrir nuevo tab
+														var win = window.open(url, '_blank');
+														// Cambiar el foco al nuevo tab (punto opcional)
+														win.focus();
+													  }
+													
+													//evita que se abra el link por defecto de wsp
+													event.preventDefault();
+													$.ajax({
+													type: "GET",
+													url: "/contador/",
+													data: {},
+													success: function (data) {var json=JSON.parse(data);
+														response=data;
+														console.log(response);
+														abrirNuevoTab('https://api.whatsapp.com/send?phone=%' +  numero_wsp  +'&text=Hola+Maida'); 
+													window.open(url);
+													}      
+
+													});
+													  
+
+												}
+												
+
+
+											}
+											
+									</script>
+									
+									<!-- fin del boton de whatsap -->

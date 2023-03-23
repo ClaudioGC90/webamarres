@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+{% load static %}
+
+<html>
+	<head>
+		<title>Amarres amorosos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"/></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+								
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Señora Maida Balder</h1>
+						<h2>Poderosos amarres de amor y hechizos</h2>
+							<p>¡Abone a la conformidad del resultado!</p><br />
+							<p>Usted duda que algo está sucediendo, se encuentra en la
+								constante lucha por sobrellevar las situaciones que le aquejan,
+								por eso tomó la iniciativa de buscarme, quiere saber la causa
+								de las circunstancias no favorables y con mis conocimientos le
+								ayudaré a solucionar sus temores, para que pueda disfrutar de
+								su vida como desea, con nuestros trabajos de excelencia.</p>
+							<h4> Atencion solo a mayores de 18 años</h4>
+						<ul class="actions">
+							<li><a href="#nombre_vidente" class="button icon solid solo fa-arrow-down scrolly">Continuar</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">						
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						
+						<!-- Featured Post -->
+							<article class="post featured" id="post featured">
+								<header class="major">
+									<hr></br>					
+									<article>
+										<header>
+											<h3 id="nombre_vidente"><a>Maida Filomena Balder</a></h3>
+										</header>
+										
+
+
+										
+										<!-- Carrusel automatico -->
+
+										<div id="carrusel-contenido">
+											<div id="carrusel-caja">
+												<div class="carrusel-elemento">
+													<img class="imagenes" src="{% static 'images/vidente/vidente7.jpg' %}">
+												</div>
+												<div class="carrusel-elemento">   
+													<img class="imagenes" src="{% static 'images/vidente/vidente1.jpeg' %}">
+												</div>
+												<div class="carrusel-elemento">   
+													<img class="imagenes" src="{% static 'images/vidente/vidente2.jpeg' %}">                        
+												</div>
+											</div>
+										</div>
+
+										<!--	Final del Carrusel	-->
+
+
+
+									</article>
+									<h3><a >¿Querés saber acerca de mí?</a></h3>
+									<p>Mi nombre es Maida Filomena Balder, destacada por ser la vidente más buscada
+										por la precisión y dedicación de mi trabajo, con más de 46 años en el área, los
+										trabajos más frecuentes que me solicitan son amorosos, por eso brindo un
+										asesoramiento y seguimiento de cada situación. Lo más importante es que puedan
+										recibir la ayuda y el compromiso en cada caso, por que el amor y el bienestar
+										emocional es una razón para luchar. La experiencia y el conocimiento no se
+										improvisan.</p>
+										
+									
+									{% comment %} Mi IP es: <strong id="ipId">ip</strong>
+									
+									<script>
+										function get_ip(obj){
+											document.getElementById('ipId').innerHTML = obj.ip;
+										}
+									</script> {% endcomment %}
+									
+									
+									<!-- boton de whatsap -->										
+									
+									<a class="fab fa-whatsapp" id="botonClick" type="submit" href="https://api.whatsapp.com/send?phone=%2B5493515371999&text=Hola+Maida" target="_blank"> Contactame</a>
+									
+									<script type="text/javascript">
+										const ws_button = document.querySelector("#botonClick");
+					
+										ws_button.addEventListener("click", ws_buttonClick, false);
+					
+										//para que la url se abra en una nueva ventana del navegaor
+										function abrirNuevoTab(url) {
+											// Abrir nuevo tab
+											var win = window.open(url, '_blank');
+											// Cambiar el foco al nuevo tab (punto opcional)
+											win.focus();
+										}
+										// cierre de la nueva ventana del navegador
+
+																				
+										function ws_buttonClick(event) {
+											event.preventDefault();												
+											$.ajax({
+												type: "GET",
+												url: "/contador/",
+												success: function (data) {
+													response=data;
+													console.log(response);
+													abrirNuevoTab(response.url_wsp); 
+													//window.open(response.url);
+												}    
+											});
+										}
+									
+										
+									</script>	
+									
+									{% comment %} <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip">
+										//captura la ip del usuario que entra a la pagina
+									</script> {% endcomment %}
+									
+									<!-- fin del boton de whatsap -->
+
+
+
+
+
+
+
+
+
+
+										<hr></br></br>
+									<h3><a >¿Te interesa saber qué tipo de trabajos realizo?</a></h3>
+									<p>- Amarres de amor, endulzamientos y uniones del mismo sexo.</br>
+										Poderosos hechizos con los que se quiere solucionar un problema en la
+										relación de pareja. En las relaciones sentimentales los problemas pueden ir
+										acumulándose y, si no hacemos nada, al final puede terminar en
+										distanciamiento, ruptura o separación. Estos hechizos representan una de las
+										medidas más importantes y poderosas con las que poder solucionar estos
+										problemas y encauzar la relación hacia un camino de mutuo entendimiento,
+										cariño y mucha más pasión.</p>
+									<p>- Amarres sexuales con Afrodita.</br>
+										Estos rituales son específicamente, para que la otra persona arda de deseo por
+										ti y no puda evitar excitarse al pensar en ti o tenerte cerca. Este tipo de
+										trabajos no requieren de un vínculo amoroso. Si hay una persona que te
+										enciende por dentro y solo quieres vivir una noche con él o ella, podrías pedir
+										uno de estos rituales. Con ello podrías conseguir dar rienda suelta a tus
+										fantasías.</p>
+									<p>- Limpiezas energéticas, liberaciones, corte de daños y destrucción de maleficios.</br>
+										Los pensamientos negativos y la envidia ajena no nos permiten estar en
+										armonía para evolucionar, cómo liberar nuestro campo energético, queremos
+										tener el control sobre nuestra mente, controlar la ansiedad, nuestros miedos y
+										no sentir estrés, buscamos que las voluntades de otras personas no influyan
+										en nuestro campo energético cuando de malas intenciones se trata.</p>
+									<p>- Atraiga el dinero y la buena suerte.</br>
+										Si el dinero se te va rápido, la prosperidad y la buena situación económica
+										cada vez está peor necesitamos desbloquear la abundancia para expulsar
+										cualquier influencia negativa, te recomiendo acudas a una consulta
+										conmigo.</p>
+									<p>- Alejamientos.</br>
+										Ya sea una pareja, familiar o conocido, si crees que hay alguien que está
+										afectando tu vida, te recomiendo acudas a una consulta conmigo y aparta a
+										esas personas malas de tu entorno, a aquellas que no tienen buenas
+										intenciones o quienes cuyos vínculos nos resultan muy tóxicos.</p>
+								</header>
+
+								<!-- carta 1 -->
+								<div class="card">
+									<div class="front">
+										<a class="image"><img src="{% static 'images/cartas/carta1.png' %}" alt="" /></a>
+									</div>
+									<div class="back">
+										<h6>Amarres de Amor</br>endulzamientos</h6>
+									</div>
+								</div>
+
+								<!-- carta 2 -->
+								<div class="card">
+									<div class="front">
+										<a class="image"><img src="{% static 'images/cartas/carta2.png' %}" alt="" /></a>										
+									</div>
+									<div class="back">
+										<h6>Fortuna</br>buena suerte</h6>	
+									</div>
+								</div>
+								
+								<!-- carta 3 -->
+								<div class="card">
+									<div class="front">
+										<a class="image"><img src="{% static 'images/cartas/carta3.png' %}" alt="" /></a>	
+									</div>
+									<div class="back">
+										<h6>Limpieza de maleficios</h6>
+									</div>
+								</div>
+
+								<!-- carta 4 -->
+								<div class="card">
+									<div class="front">
+										<a class="image"><img src="{% static 'images/cartas/carta4.png' %}" alt="" /></a>
+									</div>
+									<div class="back">
+										<h6>Alejamientos</h6>	
+									</div>
+								</div>		
+							</article>
+
+						<!-- Posts -->							
+							<section class="posts">	
+								
+								<!--Ventana Modal "Testimonios"-->
+								{% comment %} <input type="checkbox" id="btn-modal2">
+								<div class="container-modal2">
+									<div class="content-modal2">
+										<h2 id="testimonios">Testimonios</h2></br>
+										<div id="columna1">
+											<img class="imagenes" src="{% static 'images/testimonios/testimonio1.jpeg' %}">
+											<img class="imagenes" src="{% static 'images/testimonios/testimonio1.jpeg' %}">
+										</div>
+										<div id="columna2">
+											<img class="imagenes" src="{% static 'images/testimonios/testimonio2.jpeg' %}">
+											<img class="imagenes" src="{% static 'images/testimonios/testimonio2.jpeg' %}">
+										</div>
+										<div id="columna3">
+											<img class="imagenes" src="{% static 'images/testimonios/testimonio3.jpeg' %}">
+										</div>
+										<div class="btn-cerrar2">
+											<label for="btn-modal2">Cerrar</label>
+										</div>
+									</div>
+									<label for="btn-modal2" class="cerrar-modal2"></label>
+								</div> {% endcomment %}
+							<!--Fin de Ventana Modal-->
+
+								<!--Ventana Modal "terminos y condiciones"-->
+									<input type="checkbox" id="btn-modal">
+									<div class="container-modal">
+										<div class="content-modal">
+											<h2 id="terminos">Terminos y Condiciones</h2></br>
+												<ul><li>1. En nuestra web no almacenamos información personal
+												ni financiera, los datos compartidos por el consumidor son totalmente
+												privados y no serán compartidos bajo ninguna excepción.</li></ul>
+												<ul><li>2. El envío de cualquier tipo de información, tanto que el consumidor manda
+												como que reciba debe ser bajo su total consentimiento.</li></ul>
+												<ul><li>3. Los resultados siempre van a depender de cada consumidor, y del caso
+												concreto.</li></ul>
+												<ul><li>4. Al utilizar cualquier de los servicios que ofrecemos, el consumidor declara que
+												acepta y entiende nuestra política de privacidad.</li></ul>
+												<ul><li>5. Los consumidores deben ser sin excepción mayores de edad (18 años). Los
+												servicios ofrecidos son pura y exclusivamente para personas adultas.</li></ul>
+												<ul><li>6. Los servicios que se ofrecen no sustituyen la atención médica, psicológica y
+												psiquiátrica profesional.</li></ul>
+												<ul><li>7. De acuerdo con las legislaciones vigentes se establece que las lecturas,
+												videncias, hechizos, predicciones, etc. Tienen fines de entretenimiento y sin base
+												científica.</li></ul>
+												<ul><li>8. Las consultas son totalmente gratuitas.</li></ul>
+												<ul><li>9. No se hace responsable por cualquier tipo de pérdida o daño relacionado con
+												el mal manejo del sitio web, o uso indebido de la información suministrada.</li></ul>
+												<ul><li>10. El consumidor renuncia a cualquier posibilidad de reembolso una vez
+												efectuado el pago.</li></ul>
+												<ul><li>11. Al usar nuestros servicios el consumidor manifiesta que entiende y está
+												totalmente de acuerdo con los puntos anteriores.</li></ul>	
+											<div class="btn-cerrar">
+												<label for="btn-modal">Cerrar</label>
+											</div>
+										</div>
+										<label for="btn-modal" class="cerrar-modal"></label>
+									</div>
+								<!--Fin de Ventana Modal-->																
+								
+							</section>							
+
+						<!-- Footer -->
+						<footer>
+
+							<!--Boton-->
+							<div class="boton-modal center2">
+								<label for="btn-modal2">
+									-♥-♥-♥- Testimonios	-♥-♥-♥-
+								</label>
+							</div>
+							
+							<!--Boton-->	
+							<div class="boton-modal center">
+								<label for="btn-modal">
+									Terminos y Condiciones
+								</label>
+							</div>	
+							
+							<!--Fin de Boton-->
+							<hr>
+							</br>
+							<a href="" class="logo">Inicio</a>	
+							</br></br>
+							<hr>
+						</footer>
+
+						
+
+					</div>
+
+			
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; ByDevClaudio</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
