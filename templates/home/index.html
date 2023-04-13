@@ -42,12 +42,12 @@
 						<!-- Featured Post -->
 							<article class="post featured" id="post featured">
 								<header class="major">
-									<hr></br>					
+									<hr>					
 									<article>
 										<header>
 											<h3 id="nombre_vidente"><a>Maida Filomena Balder</a></h3>
 										</header>
-										
+									
 
 
 										
@@ -213,44 +213,23 @@
 										<a class="image"><img src="{% static 'images/cartas/carta4.png' %}" alt="" /></a>
 									</div>
 									<div class="back">
-										<h6>Alejamientos</h6>	
+										<h4>Alejamientos</h4>	
 									</div>
 								</div>		
 							</article>
 
-						<!-- Posts -->							
+						<!-- Posts -->		
+											
 							<section class="posts">	
 								
-								<!--Ventana Modal "Testimonios"-->
-								{% comment %} <input type="checkbox" id="btn-modal2">
-								<div class="container-modal2">
-									<div class="content-modal2">
-										<h2 id="testimonios">Testimonios</h2></br>
-										<div id="columna1">
-											<img class="imagenes" src="{% static 'images/testimonios/testimonio1.jpeg' %}">
-											<img class="imagenes" src="{% static 'images/testimonios/testimonio1.jpeg' %}">
-										</div>
-										<div id="columna2">
-											<img class="imagenes" src="{% static 'images/testimonios/testimonio2.jpeg' %}">
-											<img class="imagenes" src="{% static 'images/testimonios/testimonio2.jpeg' %}">
-										</div>
-										<div id="columna3">
-											<img class="imagenes" src="{% static 'images/testimonios/testimonio3.jpeg' %}">
-										</div>
-										<div class="btn-cerrar2">
-											<label for="btn-modal2">Cerrar</label>
-										</div>
-									</div>
-									<label for="btn-modal2" class="cerrar-modal2"></label>
-								</div> {% endcomment %}
-							<!--Fin de Ventana Modal-->
+									
 
 								<!--Ventana Modal "terminos y condiciones"-->
 									<input type="checkbox" id="btn-modal">
 									<div class="container-modal">
 										<div class="content-modal">
 											<h2 id="terminos">Terminos y Condiciones</h2></br>
-												<ul><li>1. En nuestra web no almacenamos información personal
+												<ul><li>1. En nuestra web "www.maidaamarres.com" no almacenamos información personal
 												ni financiera, los datos compartidos por el consumidor son totalmente
 												privados y no serán compartidos bajo ninguna excepción.</li></ul>
 												<ul><li>2. El envío de cualquier tipo de información, tanto que el consumidor manda
@@ -283,24 +262,37 @@
 								
 							</section>							
 
+							
+							<div class="testimonios">
+								<hr>
+									<h3><a> Testimonios </a></h3>
+								<hr>	
+								<div id="columna1">
+									<img class="imagenes" src="{% static 'images/testimonios/testimonio1.jpeg' %}">											
+								</div>
+								<div id="columna2">
+									<img class="imagenes" src="{% static 'images/testimonios/testimonio2.jpeg' %}">
+								</div>
+								<div id="columna3">
+									<img class="imagenes" src="{% static 'images/testimonios/testimonio3.jpeg' %}">
+								</div>
+							</div>
+
+
+
 						<!-- Footer -->
 						<footer>
 
-							<!--Boton-->
-							<div class="boton-modal center2">
-								<label for="btn-modal2">
-									-♥-♥-♥- Testimonios	-♥-♥-♥-
-								</label>
-							</div>
+							<hr>
 							
 							<!--Boton-->	
 							<div class="boton-modal center">
 								<label for="btn-modal">
 									Terminos y Condiciones
 								</label>
-							</div>	
-							
+							</div>								
 							<!--Fin de Boton-->
+
 							<hr>
 							</br>
 							<a href="" class="logo">Inicio</a>	

@@ -8,9 +8,6 @@ from django.http import JsonResponse
 from django_ratelimit.decorators import ratelimit
 
 #REST-FRAMEWORK
-from .serializers import DatosHomeSerializer
-from rest_framework.generics import RetrieveUpdateAPIView
-
 from rest_framework.throttling import AnonRateThrottle
 from rest_framework.decorators import throttle_classes
 #otro estrangulador de peticiones
@@ -18,6 +15,9 @@ from .throttling import AnonymousUserThrottle
 
 #models local
 from .models import DatosHome
+
+
+
 
 # Create your views here.
 
@@ -47,12 +47,5 @@ def numero_wsp(request):
     
     return JsonResponse(data)
 
-    
-class ContadorRetrieveUpdateAPIView(RetrieveUpdateAPIView):
-    serializer_class = DatosHomeSerializer
-    queryset = DatosHome.objects.all()
-
-
-    
 
     
