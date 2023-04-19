@@ -11,7 +11,7 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+footer, header, hgroup, menu, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -21,7 +21,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, section {
 	display: block;}
 
 body {
@@ -181,7 +181,7 @@ input, select, textarea {
 		line-height: 1.5;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
-		margin: 0 0 1rem 0;
+		margin: auto 0 auto 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -204,7 +204,7 @@ input, select, textarea {
 	/* tamaño de los titulos del cuerpo */
 	h3 {
 		font-size: 2.75rem;
-		margin: 0 0 1.5rem 0;
+		margin: auto 0 1.5rem 0;
 	}
 
 	h4 {
@@ -2938,7 +2938,7 @@ input, select, textarea {
 
 		header > h3 + p {
 			font-size: 0.9rem;
-			margin-top: -0.75rem;
+			/* margin-top: -0.75rem; */
 		}
 
 		header > h4 + p {
@@ -3451,7 +3451,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-			body.is-preload #intro:not(.hidden) + #header + #nav {
+			body.is-preload #intro:not(.hidden) + #header {
 				-moz-transform: translateY(4rem);
 				-webkit-transform: translateY(4rem);
 				-ms-transform: translateY(4rem);
@@ -3615,7 +3615,7 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
+	/* #nav {
 		color: #ffffff;
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -3761,7 +3761,7 @@ input, select, textarea {
 				display: none;
 			}
 
-		}
+		} */
 
 /* Main */
 
@@ -4420,7 +4420,7 @@ input, select, textarea {
 		line-height: 1.5;
 		text-align: center;
 		text-transform: uppercase;
-		margin: 4rem auto 8rem auto;
+		/* margin: 2rem auto 6rem auto; */
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
@@ -4468,16 +4468,17 @@ input, select, textarea {
 
 		#copyright ul {
 			list-style: none;
-			margin: 0;
-			padding-left: 0;
+			/* margin: 0% 0%; */
+			/* padding-left: 0; */
 		}
 
 			#copyright ul li {
 				border-left: solid 2px;
-				display: inline-block;
+				display:contents;
 				line-height: 1;
-				margin-left: 1rem;
-				padding-left: 1rem;
+				/* margin: 0% auto;
+				text-align: center; */
+				background-color: white;
 			}
 
 				#copyright ul li:first-child {
@@ -4733,7 +4734,118 @@ input, select, textarea {
 	float:left;
 	margin-inline: 10px;
 	margin-bottom: 10%;
+	background-color: transparent;
 }
+	@media screen and (max-width: 1280px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:center;
+			margin-inline: 39%;
+			margin-bottom: 10%;
+			/* background-color:rgba(113, 121, 129, 0.5); */
+		}
+
+	}
+	
+	@media screen and (max-width: 980px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:center;
+			margin-inline: 37%;
+			margin-bottom: 10%;
+			/* background-color: red; */
+		}
+
+	}
+	@media screen and (max-width: 766px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:left;
+			margin-inline: 30%;
+			margin-bottom: 10%;
+			/* background-color: blue; */
+		}
+
+	}
+
+	@media screen and (max-width: 580px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:left;
+			margin-inline: 25%;
+			margin-bottom: 10%;
+			/* background-color: white; */
+		}
+
+	}
+
+	@media screen and (max-width: 520px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:left;
+			margin-inline: 24%;
+			margin-bottom: 10%;
+			/* background-color: teal; */
+		}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:left;
+			margin-inline: 26%;
+			margin-bottom: 10%;
+			/* background-color: gold; */
+		}
+
+	}
+
+	@media screen and (max-width: 420px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:left;
+			margin-inline: 21%;
+			margin-bottom: 10%;
+			/* background-color: purple; */
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		.card {
+			position: relative;
+			width: 200px;
+			height: 300px;
+			float:left;
+			margin-inline: 18%;
+			margin-bottom: 10%;
+			/* background-color:brown; */
+		}
+
+	}
 
 .card div {
     position: absolute;
@@ -4852,11 +4964,8 @@ body{
 
 /*:::Boton-Modal:::*/
 .boton-modal{
-    padding: 40px;
-	margin-left: 30%;
-	margin-right: 30%;
+	margin: 2% 30% 2% 30%;
     background-color: transparent;
-	text-align: center;
 	width: 40%;
 }
 .boton-modal label{
@@ -4866,6 +4975,7 @@ body{
     border-radius: 4px;
     cursor: pointer;
     transition: all 300ms ease;
+	font-size:80%;
 }
 .boton-modal label:hover{
     background-color: #185E83;
@@ -5063,6 +5173,10 @@ body{
 	.fa-whatsapp {
 	background: transparent;
 	color: #cfc49f;
+	font-size: 200%;
+	width: auto;
+	margin:auto;
+	border:0;
 	}
 
 /* fin del boton de whatsap */
@@ -5239,7 +5353,7 @@ h1 {
 /* seccion testimonio */
 .testimonios{
 	text-align: center;
-	margin: 100px;
+	float: center;
 }
 .testimonios div img {
 	display:grid;
