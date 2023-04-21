@@ -2,15 +2,15 @@
 
 #DJANGO
 from django.views.generic import TemplateView
-from django.http import JsonResponse
+from django.http import JsonResponse, response
 
 #limitador de django
 from django_ratelimit.decorators import ratelimit
 
 #REST-FRAMEWORK
-from rest_framework.throttling import AnonRateThrottle
-from rest_framework.decorators import throttle_classes
-#otro estrangulador de peticiones
+from rest_framework.throttling import AnonRateThrottle, UserRateThrottle, ScopedRateThrottle
+from rest_framework.decorators import throttle_classes, action
+#otro estrangulador de peticiones 
 from .throttling import AnonymousUserThrottle
 
 #models local
@@ -21,19 +21,21 @@ from .models import DatosHome
 
 # Create your views here.
 
-
-@throttle_classes([AnonRateThrottle])
 class HomePageView(TemplateView):
-    template_name = "home/index.html"
-        
-    def get(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)   
- 
- 
-@ratelimit(key='ip', rate='2/h')
-@throttle_classes([AnonRateThrottle])       
-def numero_wsp(request):
+    template_name = "home/index.html"    
+  
     
+""" class RateLimitedAnon(AnonRateThrottle):
+    rate = '2/hour' """
+
+
+
+""" @ratelimit(key='ip', rate='2/h', method='GET') """
+""" @throttle_classes([AnonRateThrottle]) """
+
+def numero_wsp(request):
+    """ throttle_classes = [RateLimitedAnon()] """
+                
     foo = DatosHome.objects.last()   
     foo.contador_clicks_wthasapp += 1
     foo.save()
@@ -45,7 +47,7 @@ def numero_wsp(request):
     
     data = {"url_wsp": url_wsp}
     
-    return JsonResponse(data)
+    return JsonResponse(data)    
 
 
     
