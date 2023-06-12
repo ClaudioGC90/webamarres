@@ -25,10 +25,20 @@ SECRET_KEY = 'django-insecure-yhqzk(+5su1_6fy%fjll9gug8g=^v$ly36zh(gu*+@177xiv-0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '2/hour', # 2 solicitudes al día para usuarios no autenticados
+        'user': '2/hour', # 2 solicitudes al día para usuarios autenticados
+    }
+}
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,10 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #limitador
     #DRF
-    'rest_framework',
-    'django_throttling',
+    'rest_framework',  
     #local apps
     'applications.home',
 ]
@@ -75,18 +83,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'amarresweb.wsgi.application'
 
-REST_FRAMEWORK = {
-    'DEFAULT_THROTTLE_CLASSES': [
-        'applications.home.throttling.AnonymousUserThrottle',
-        'rest_framework.throttling.AnonRateThrottle',
-        'rest_framework.throttling.UserRateThrottle'
-    ],
-    'DEFAULT_THROTTLE_RATES': {
-        'anonymous': '1/day',
-        'anon': '1/day',
-        'user': '1/day'
-    }
-}
+
 
 
 # Database

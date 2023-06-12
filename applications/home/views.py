@@ -30,9 +30,9 @@ class HomePageView(TemplateView):
 
 
 
-""" @ratelimit(key='ip', rate='2/h', method='GET') """
-""" @throttle_classes([AnonRateThrottle]) """
 
+""" @throttle_classes([AnonRateThrottle]) """
+@ratelimit(key='ip', rate='2/h', method='GET')
 def numero_wsp(request):
     """ throttle_classes = [RateLimitedAnon()] """
                 
