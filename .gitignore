@@ -1,0 +1,6 @@
+# Ignorar la carpeta de caché de Django
+__pycache__/
+
+# Ignorar los archivos de caché de Django
+*.pyc
+*.pyo
