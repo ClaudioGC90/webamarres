@@ -1,0 +1,8 @@
+amarresweb
+applications
+db.sqlite3
+manage.py
+requirements.txt
+static
+templates
+test.txt
