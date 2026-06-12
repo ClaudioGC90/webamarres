@@ -1,2 +1,2 @@
-# webamarres
-Pagina web de amarres amorosos
+# web Tarotista
+Pagina Web de servicios de tarot
